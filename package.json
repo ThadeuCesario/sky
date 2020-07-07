@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "echo \"Error: no test specified\" && exit 1"
+    "start": "live-server public/"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,10 @@
     "url": "https://github.com/ThadeuCesario/sky/issues"
   },
   "homepage": "https://github.com/ThadeuCesario/sky#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "minify": "^5.1.1"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",

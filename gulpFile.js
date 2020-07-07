@@ -2,8 +2,8 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass'); 
 
-var mainScssFile = 'public/src/scss/main-style.scss';
-var scssFiles = 'public/src/scss/**/*.scss';
+var mainScssFile = 'src/scss/main-styles.scss';
+var scssFiles = 'src/scss/**/*.scss';
 
 var sassProdOptions = {
     outputStyle: 'compressed'

@@ -1,0 +1,30 @@
+{
+  "name": "sky",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThadeuCesario/sky.git"
+  },
+  "keywords": [],
+  "author": "Thadeu Munhóz Cesário",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThadeuCesario/sky/issues"
+  },
+  "homepage": "https://github.com/ThadeuCesario/sky#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.11.0-rc1",
+    "node-sass": "^4.13.0"
+  }
+}

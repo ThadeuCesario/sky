@@ -2,7 +2,20 @@
 
 
 @include desktop {   
-  body{
-    color: green;
+  .sky{
+
+    &-header{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #f1f2fa;
+
+      &__options{
+        cursor: pointer;
+        &-icon{
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

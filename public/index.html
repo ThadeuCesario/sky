@@ -4,18 +4,33 @@
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="./assets/global/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style-main.min.css">
   <title>Assista Filmes e Séries em Qualquer Lugar | SKY Play</title>
 </head>
 <body>
-  <header>
-    <h1>
-      <a href="/" rel='home'>
-        <img src="./assets/global/logo-sky.svg" alt="Sky Logo">
+  <header class="sky-header">
+    <h1 class="sky-header__logo">
+      <a href="/" rel='home' class="sky-header__logo-link">
+        <img src="./assets/global/logo-sky.svg" alt="Sky Logo" class="sky-header__logo-img">
       </a>
     </h1>
-    <i class="fa fa-plus-square-o" aria-hidden="true"></i>
-    <i class="fa fa-minus-square" aria-hidden="true"></i>
-    <i class="fa fa-adjust" aria-hidden="true"></i>
+
+    <div class="sky-header__options">
+      <i class="fa fa-universal-access sky-header__options-icon" aria-hidden="true"></i>
+      <i class="fa fa-plus-square-o sky-header__options-icon" aria-hidden="true"></i>
+      <i class="fa fa-minus-square sky-header__options-icon" aria-hidden="true"></i>
+      <i class="fa fa-adjust sky-header__options-icon" aria-hidden="true"></i>
+    </div>
+
+    <span class="sky-header__options">
+      <i class="fa fa-play sky-header__options-icon" aria-hidden="true"></i>
+      Play
+    </span>
+    <span class="sky-header__options">
+      <i class="fa fa-user sky-header__options-icon" aria-hidden="true"></i>
+      Entrar
+    </span>
+    <i class="fa fa-search sky-header__options-icon" aria-hidden="true"></i>
   </header>
   <nav>
     Menu de navegação

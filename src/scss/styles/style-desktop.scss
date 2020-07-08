@@ -1,20 +1,82 @@
 @import 'config/mixins.scss';
 
-
 @include desktop {   
   .sky{
-
     &-header{
       display: flex;
       flex-direction: row;
       align-items: center;
+      justify-content: space-around;
       background-color: #f1f2fa;
       padding: 15px;
 
       &__options{
         cursor: pointer;
+        color: #5A5F6A;
+
         &-icon{
           cursor: pointer;
+          color: #5A5F6A;
+        }
+
+        &-short{
+          border: solid 1px #fff;
+          border-radius: 50%;
+          padding: 5px;
+          background-color: #fff;
+        }
+
+        .fa{
+          color: #5A5F6A;
+        }
+      }
+
+      &__navigation{
+        &-list{
+          display: flex;
+          flex-direction: row;
+          box-shadow: 0 10px 8px -4px rgba(0, 0, 0, 0.25);
+          &-item{
+            width: 33%;
+            text-align: center;
+            list-style-type: none;
+            cursor: pointer;
+            padding: 15px;
+          }
+        }
+      }
+
+      > div{
+        &:first-child{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          .sky{
+            &-header{
+              &__options{
+                margin: 0 15px;
+
+                .fa{
+                  &:hover{
+                    &::before{
+                      transition: .2s;
+                      opacity: 0.5;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        &:last-child{
+          .sky{
+            &-header{
+              &__options{
+                margin: 0 15px;
+              }
+            }
+          }
         }
       }
     }

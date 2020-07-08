@@ -5,48 +5,53 @@
   <link rel="shortcut icon" href="./assets/global/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style-main.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Assista Filmes e Séries em Qualquer Lugar | SKY Play</title>
 </head>
 <body>
   <header class="sky-header">
-    <h1 class="sky-header__logo">
-      <a href="/" rel='home' class="sky-header__logo-link">
-        <img src="./assets/global/logo-sky.svg" alt="Sky Logo" class="sky-header__logo-img">
-      </a>
-    </h1>
-
-    <div class="sky-header__options">
-      <i class="fa fa-universal-access sky-header__options-icon" aria-hidden="true"></i>
-      <i class="fa fa-plus-square-o sky-header__options-icon" aria-hidden="true"></i>
-      <i class="fa fa-minus-square sky-header__options-icon" aria-hidden="true"></i>
-      <i class="fa fa-adjust sky-header__options-icon" aria-hidden="true"></i>
+    <div>
+      <h1 class="sky-header__logo">
+        <a href="/" rel='home' class="sky-header__logo-link">
+          <img src="./assets/global/logo-sky.svg" alt="Sky Logo" class="sky-header__logo-img">
+        </a>
+      </h1>
+  
+      <div class="sky-header__options">
+        <i class="fa fa-universal-access sky-header__options-icon sky-header__options-short" aria-hidden="true"></i>
+        <i class="fa fa-adjust sky-header__options-icon sky-header__options-short" aria-hidden="true"></i>
+        <i class="fa fa-plus-square-o sky-header__options-icon sky-header__options-short" aria-hidden="true"></i>
+        <i class="fa fa-minus-square sky-header__options-icon sky-header__options-short" aria-hidden="true"></i>
+      </div>
     </div>
 
     <span class="sky-header__options">
       <i class="fa fa-play sky-header__options-icon" aria-hidden="true"></i>
       Play
     </span>
-    <span class="sky-header__options">
-      <i class="fa fa-user sky-header__options-icon" aria-hidden="true"></i>
-      Entrar
-    </span>
-    <i class="fa fa-search sky-header__options-icon" aria-hidden="true"></i>
+    <div>
+      <span class="sky-header__options">
+        <i class="fa fa-user sky-header__options-icon" aria-hidden="true"></i>
+        Entrar
+      </span>
+      <i class="fa fa-search sky-header__options-icon" aria-hidden="true"></i>
+    </div>
   </header>
-  <nav>
-    <ul>
-      <li>
+  <nav class="sky-header__navigation">
+    <ul class="sky-header__navigation-list">
+      <li class="sky-header__navigation-list-item">
         Filmes
       </li>
-      <li>
+      <li class="sky-header__navigation-list-item">
         Séries
       </li>
-      <li>
+      <li class="sky-header__navigation-list-item">
         Canais
       </li>
     </ul>
   </nav>
   <section>
-    Seção
+
   </section>
   <footer>
     <script src="https://use.fontawesome.com/fe3bd63693.js"></script>

@@ -107,11 +107,14 @@
       &__institutional{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         padding: 20px;
+        border-top: 1px solid rgba(80,80,80,0.15);
+        
         &-app{
           display: flex;
+          width: 40%;
           &-title{
             margin: 0 20px;
           }
@@ -130,6 +133,57 @@
 
               &:first-child{
                 margin-left: 0;
+              }
+            }
+          }
+        }
+
+        &-about{
+          &-title{
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.38);
+            font-size: 1.125rem;
+          }
+          &-list{
+            &-item{
+              list-style-type: none;
+              padding: 20px 0 0 0;
+              a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.87);
+                transition: .4s;
+
+                &:hover{
+                  color: #782D2B;
+                }
+              }
+            }
+          }
+          + div{
+            margin: 20px 0 0 0;
+          }
+        }
+
+        &-helper{
+          &-title{
+
+          }
+        }
+
+        &-flex{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          width: 60%;
+
+          &-options{
+            strong{
+              > ul{
+                margin-top: 15px;
+                &:hover{
+                  color: rgba(0,0,0,0.87);
+                  opacity: 0.8;
+                }
               }
             }
           }

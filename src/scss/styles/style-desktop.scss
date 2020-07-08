@@ -189,6 +189,46 @@
           }
         }
       }
+
+      &__sub{
+        &-menu{
+          &-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 50px;
+            background-color: #fff;
+            &-item{
+              list-style-type: none;
+              &::after{
+                content: '|';
+                margin: 0 25px;
+              }
+
+              &:last-child{
+                &::after{
+                  display: none;
+                }
+              }
+
+              span{
+                &:hover{
+                  transition: .4s;
+                  color: #DB524F;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &__copyright{
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 0.875rem;
+        padding: 20px;
+      }
     }
   }
 }

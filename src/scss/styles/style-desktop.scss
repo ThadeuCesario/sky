@@ -80,5 +80,39 @@
         }
       }
     }
+
+    &-footer{
+      background-color: #F1F2FA;
+      border-top: 1px solid rgba(80, 80, 80, 0.15);
+      
+      &__options{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        &-logo{}
+        &-social{
+          &-media{
+            margin: 0 10px;
+            cursor: pointer;
+            &::before{
+              font-size: 1.5rem;
+              color: #616164;
+            }
+          }
+        }
+      }
+
+      &__institutional{
+        padding: 20px;
+        &-app{
+          &-img{
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+    }
   }
 }

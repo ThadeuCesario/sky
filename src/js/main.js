@@ -27,9 +27,12 @@ window.onload = function(){
   function loadMainMoviesByType(data){
     let portraitMoviesData = data.filter(info => (info.type).trim().toLowerCase() === 'carousel-portrait');
     let moviesPortrait = portraitMoviesData[0]['movies'];
+    console.log(moviesPortrait);
     let typesMoviesPortrait = (moviesPortrait.map(movie => movie.categories).map(categoryType => categoryType.split(','))).flat(Infinity);
+    typesMoviesPortrait = typesMoviesPortrait.map(movie => movie.trim());
     typesMoviesPortrait = typesMoviesPortrait.filter((value, index) => typesMoviesPortrait.indexOf(value) === index);
     let moviesPortraitSection = document.getElementById('portrait-movies');
+
 
     for(let i = 0; i < typesMoviesPortrait.length; i++){
       let articlePortraitMovies = document.createElement('article');
@@ -37,13 +40,11 @@ window.onload = function(){
 
       let moviesSpecificCategory = moviesPortrait.filter(movie => movie.categories.includes(typesMoviesPortrait[i]));
 
-      console.log(moviesSpecificCategory)
-
       articlePortraitMovies.innerHTML = `
         <h2 class='sky-main__portrait-title'>${typesMoviesPortrait[i]}</h2>
         <div class='sky-main__portrait-movie owl-carousel'>${moviesSpecificCategory.map(movie => `
           <div class='owl-item__group'>
-            <img src='${(movie['images'][0]['url'])}' alt='${movie['title']}' title='${movie['title']}'/>
+            <a href='#'><img src='${(movie['images'][0]['url'])}' alt='${movie['title']}' title='${movie['title']}'/></a>
             ${movie['isBlocked'] ? `<i class="fa fa-lock" aria-hidden="true"></i>` : `<i class="fa fa-shopping-cart" aria-hidden="true"></i>`}
           </div>
           `).join('')}</div>

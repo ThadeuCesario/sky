@@ -43,7 +43,7 @@ window.onload = function(){
         <h2 class='sky-main__portrait-title'>${typesMoviesPortrait[i]}</h2>
         <div class='sky-main__portrait-movie owl-carousel'>${moviesSpecificCategory.map(movie => `
           <div class='owl-item__group'>
-            <img src='${(movie['images'][0]['url'])}'/>
+            <img src='${(movie['images'][0]['url'])}' alt='${movie['title']}' title='${movie['title']}'/>
             ${movie['isBlocked'] ? `<i class="fa fa-lock" aria-hidden="true"></i>` : `<i class="fa fa-shopping-cart" aria-hidden="true"></i>`}
           </div>
           `).join('')}</div>

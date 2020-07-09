@@ -17,5 +17,11 @@ function sliderLoadMovies(){
     margin: 10,
     lazyLoad: true,
     autoWidth: true,
+    nav: true,
+    items: 7,
+    dots: false
   });
+
+  $(".sky-main__portrait-movie.owl-carousel .owl-prev").html("<i class='fa fa-arrow-left' aria-hidden='true'></i>");
+  $(".sky-main__portrait-movie.owl-carousel .owl-next").html("<i class='fa fa-arrow-right' aria-hidden='true'></i>");
 }

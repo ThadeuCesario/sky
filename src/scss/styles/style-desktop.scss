@@ -197,6 +197,9 @@
           margin: 0 0 16px 0;
         }
         &-movie{
+          position: relative;
+          overflow: hidden;
+
           img{
             border-radius: 5px;
           }
@@ -206,7 +209,7 @@
               max-width: 170px;
               &__group{
                 position: relative;
-                right: 1px;
+                cursor: pointer;
                 .fa{
                   border: solid 2px #fff;
                   border-radius: 50%;
@@ -219,6 +222,60 @@
 
                   &::before{
                     font-size: 1.125rem;
+                  }
+                }
+              }
+            }
+            &-nav{
+              position: absolute;
+              top: 50%;
+              width: 100%;
+              transition: .4s;
+              opacity: 0;
+              
+              .owl-prev{
+                position: absolute;
+                left: -32px;
+                padding: 25px;
+                border-radius: 50%;
+                background-color: #242a2c;
+                opacity: 1;
+
+                .fa{
+                  color: #fff;
+                }
+
+                &.disabled{
+                  transition: .4s;
+                  opacity: 0.5;
+                }
+              }
+              .owl-next{
+                position: absolute;
+                right: -32px;
+                padding: 25px;
+                border-radius: 50%;
+                background-color: #242a2c;
+                opacity: 1;
+
+                .fa{
+                  color: #fff;
+                }
+
+                &.disabled{
+                  transition: .4s;
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+
+          &.owl{
+            &-carousel{
+              &:hover{
+                .owl{
+                  &-nav{
+                    opacity: 1;
                   }
                 }
               }

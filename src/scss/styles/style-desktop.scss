@@ -187,8 +187,9 @@
 
       &__portrait{
         background-color: #FAFAFF;
+        padding: 0 0 0 30px;
         &-article{
-
+          margin: 15px 0;
         }
         &-title{
           font-size: 1.375rem;
@@ -203,6 +204,24 @@
           .owl{
             &-item{
               max-width: 170px;
+              &__group{
+                position: relative;
+                right: 1px;
+                .fa{
+                  border: solid 2px #fff;
+                  border-radius: 50%;
+                  padding: 7px;
+                  position: absolute;
+                  top: 5px;
+                  right: 5px;
+                  color: #fff;
+                  background-color: rgba(0,0,0,0.5);
+
+                  &::before{
+                    font-size: 1.125rem;
+                  }
+                }
+              }
             }
           }
         }

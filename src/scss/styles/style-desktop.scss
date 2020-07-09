@@ -90,39 +90,58 @@
     &-main{
       margin: 40px 0;
       &__highlights{
-        &-wrapper{
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          margin: 0 15px;
+        &.owl{
+          &-stage{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+          }
+        }
 
-          &.swiper{
-            &-slide{
-              text-align: center;
-              font-size: 18px;
-              background: #fff;
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: -webkit-flex;
-              display: flex;
-              -webkit-box-pack: center;
-              -ms-flex-pack: center;
-              -webkit-justify-content: center;
-              justify-content: center;
-              -webkit-box-align: center;
-              -ms-flex-align: center;
-              -webkit-align-items: center;
-              align-items: center;
+        .owl-stage-outer{
+          .owl-stage{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .owl-item{
+              /* important utilizado para sobrescrever o css inline, aplicado pelo script de slider.*/
+              width: 500px !important;
+
+              > img {
+                border-radius: 10px;
+              }
+
+              &.active{
+                &.center{
+                  /* important utilizado para sobrescrever o css inline, aplicado pelo script de slider.*/
+                  transition: width .7s;
+                  width: 650px !important;
+                }
+              }
             }
           }
         }
-      }
 
-      &.swiper{
-        &-container{
-          width: 100%;
-          height: 100%;
+        .owl-dots{
+          margin: 0 auto;
+          width: 10%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          .owl-dot{
+            width: 20px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #8F969A;
+
+            &.active{
+              background-color: #F35C58;
+            }
+          }
         }
       }
     }

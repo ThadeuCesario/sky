@@ -20,6 +20,6 @@ window.onload = function(){
       }
     `;
 
-    loadSwiperHighlights();
+    sliderLoadHighlights();
   }
 }

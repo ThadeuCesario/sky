@@ -90,6 +90,8 @@
     &-main{
       margin: 40px 0;
       &__highlights{
+        height: 350px;
+
         &.owl{
           &-stage{
             display: flex;
@@ -105,10 +107,11 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
 
             .owl-item{
               /* important utilizado para sobrescrever o css inline, aplicado pelo script de slider.*/
-              width: 500px !important;
+              width: 550px !important;
 
               > img {
                 border-radius: 10px;
@@ -123,6 +126,8 @@
               }
             }
           }
+
+          
         }
 
         .owl-dots{
@@ -132,17 +137,52 @@
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
-          .owl-dot{
-            width: 20px;
-            height: 5px;
-            border-radius: 5px;
-            background-color: #8F969A;
+          position: absolute;
+          transform: translate(50%);
+          right: 50%;
+          bottom: 20px;
 
-            &.active{
-              background-color: #F35C58;
+            .owl-dot{
+              width: 20px;
+              height: 5px;
+              border-radius: 5px;
+              background-color: #8F969A;
+
+              &.active{
+                background-color: #F35C58;
+              }
             }
+        }
+
+        .owl-nav{
+          width: 100%;
+          position: absolute;
+          top: 50%;
+
+          .owl-prev{
+            position: absolute;
+            left: 0;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 10;
+            color: #fff;
+          }
+
+          .owl-next{
+            position: absolute;
+            right: 0;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 10;
+            color: #fff;
           }
         }
+
+
       }
     }
 

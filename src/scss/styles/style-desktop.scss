@@ -184,6 +184,29 @@
 
 
       }
+
+      &__portrait{
+        background-color: #FAFAFF;
+        &-article{
+
+        }
+        &-title{
+          font-size: 1.375rem;
+          font-weight: bold;
+          margin: 0 0 16px 0;
+        }
+        &-movie{
+          img{
+            border-radius: 5px;
+          }
+
+          .owl{
+            &-item{
+              max-width: 170px;
+            }
+          }
+        }
+      }
     }
 
     &-footer{

@@ -3,14 +3,15 @@ window.onload = function(){
 
   fetch(urlApi)
     .then(response => response.json())
-    .then(response => loadHighlights(response));
+    .then(response => {
+      loadHighlights(response);
+      loadMainMoviesByType(response);
+    })
 
   function loadHighlights(data){
     let highlightsData = data.filter(info => (info.type).trim().toLowerCase() === 'highlights');
     let highlightsMovies = highlightsData[0]['items'];
     let highlightsSection = document.getElementById('highlights-movies');
-    
-    console.log(highlightsMovies);
     
     highlightsSection.innerHTML = ` 
       ${
@@ -21,5 +22,33 @@ window.onload = function(){
     `;
 
     sliderLoadHighlights();
+  }
+
+  function loadMainMoviesByType(data){
+    let portraitMoviesData = data.filter(info => (info.type).trim().toLowerCase() === 'carousel-portrait');
+    let moviesPortrait = portraitMoviesData[0]['movies'];
+    let typesMoviesPortrait = (moviesPortrait.map(movie => movie.categories).map(categoryType => categoryType.split(','))).flat(Infinity);
+    typesMoviesPortrait = typesMoviesPortrait.filter((value, index) => typesMoviesPortrait.indexOf(value) === index);
+    let moviesPortraitSection = document.getElementById('portrait-movies');
+
+    for(let i = 0; i < typesMoviesPortrait.length; i++){
+      let articlePortraitMovies = document.createElement('article');
+      articlePortraitMovies.classList.add('sky-main__portrait-article');
+
+      let moviesSpecificCategory = moviesPortrait.filter(movie => movie.categories.includes(typesMoviesPortrait[i]));
+
+      console.log(moviesSpecificCategory)
+
+      articlePortraitMovies.innerHTML = `
+        <h2 class='sky-main__portrait-title'>${typesMoviesPortrait[i]}</h2>
+        <div class='sky-main__portrait-movie owl-carousel'>${moviesSpecificCategory.map(movie => `<img src='${(movie['images'][0]['url'])}'/>`).join('')}</div>
+      `;
+
+      moviesPortraitSection.appendChild(articlePortraitMovies);
+    }
+    
+    console.log(moviesPortraitSection);
+
+    sliderLoadMovies();
   }
 }

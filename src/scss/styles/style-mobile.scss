@@ -389,7 +389,7 @@
   
           &-about{
             border-bottom: 1px solid rgba(80,80,80,0.15);
-            padding: 0 15px;
+            padding: 15px;
 
             > div{
               display: flex;
@@ -433,7 +433,7 @@
               }
             }
             + div{
-              padding: 0 15px;
+              padding: 15px;
               border-bottom: 1px solid rgba(80,80,80,0.15);
             }
           }
@@ -451,6 +451,7 @@
             width: 100%;
   
             &-options{
+              padding: 0 0 15px 0;
               strong{
                 > ul{
                   margin-top: 15px;
@@ -473,7 +474,7 @@
                           + strong{
                             ul{
                               li{
-                                padding: 0 15px;
+                                padding: 15px 15px 0;
                               }
                             }
                           }

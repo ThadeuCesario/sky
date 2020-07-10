@@ -59,4 +59,5 @@ window.onload = function(){
   increaseFontSize();
   decreaseFontSize();
   categoryMarker();
+  loadAccordionFuncionalityFooter();
 }

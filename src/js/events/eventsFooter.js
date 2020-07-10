@@ -3,8 +3,8 @@ function loadAccordionFuncionalityFooter(){
 
   for(let i = 0; i < arrowsFooterMenu.length; i++){
     arrowsFooterMenu[i].addEventListener('click', function(event){
+      this.classList.toggle('is--active');
       (this.parentElement.parentElement).classList.toggle('is--active');
-
     });
   }
 }

@@ -425,6 +425,13 @@
 
               + svg{
                 width: 20px;
+                transform: rotate(0deg);
+                transition: .4s;
+
+                &.is--active{
+                  transform: rotate(180deg);
+                  transition: .4s;
+                }
               }
             }
 
@@ -450,6 +457,7 @@
 
              
             }
+
             + div{
               border-bottom: 1px solid rgba(80,80,80,0.15);
             }
@@ -460,6 +468,20 @@
                   &-helper{
                     &.is--active{
                       height: 100px;
+                    }
+                  }
+                }
+              }
+            }
+
+            &-sky{
+              .sky-footer{
+                &__institutional{
+                  &-about{
+                    &-list{
+                      &-item{
+                        padding: 10px 15px;
+                      }
                     }
                   }
                 }

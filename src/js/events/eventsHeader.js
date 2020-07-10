@@ -75,3 +75,17 @@ function closeMobileMenu(){
   });
 }
 
+function handleSearchMenu(){
+  let searchBtn = document.getElementById('btn-search');
+  let modalSearch = document.getElementById('menu-search');
+  let closeBtn = document.getElementById('btn-close-search');
+
+  searchBtn.addEventListener('click', function(){
+    modalSearch.classList.add('is--active');
+  });
+
+  closeBtn.addEventListener('click', function(){
+    modalSearch.classList.remove('is--active');
+  });
+}
+

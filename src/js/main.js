@@ -67,4 +67,5 @@ window.onload = function(){
   openMobileMenu();
   closeMobileMenu();
   verifyErrorBanners();
+  handleSearchMenu();
 }

@@ -76,6 +76,5 @@ function verifyErrorBanners(){
   if(isError){
     $(".sky-main__highlights.owl-carousel").owlCarousel('refresh');
     $(".sky-main__portrait-movie.owl-carousel").owlCarousel('refresh');
-    verifyErrorBanners();
   }
 }

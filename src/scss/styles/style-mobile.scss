@@ -14,10 +14,7 @@
         transition: .4s;
   
         &__options{
-          cursor: pointer;
-          color: #5A5F6A;
-          font-size: 1rem;
-  
+          display: none;
           &-icon{
             cursor: pointer;
             color: #5A5F6A;
@@ -68,6 +65,7 @@
             .sky{
               &-header{
                 &__options{
+                  display: none;
                   margin: 0 15px;
                   font-size: 1rem;
                   -webkit-touch-callout: none;

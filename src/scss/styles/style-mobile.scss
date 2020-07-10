@@ -100,6 +100,8 @@
   
       &-main{
         margin: 40px 0;
+        padding: 0 15px;
+        overflow: hidden;
         &__highlights{
           height: 350px;
   
@@ -113,17 +115,13 @@
           }
   
           .owl-stage-outer{
+            overflow: visible;
             .owl-stage{
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
               cursor: pointer;
   
               .owl-item{
                 /* important utilizado para sobrescrever o css inline, aplicado pelo script de slider.*/
-                width: 550px !important;
-  
+                  width: 330px !important;
                 > img {
                   border-radius: 10px;
                 }
@@ -131,8 +129,7 @@
                 &.active{
                   &.center{
                     /* important utilizado para sobrescrever o css inline, aplicado pelo script de slider.*/
-                    transition: width .7s;
-                    width: 650px !important;
+                    
                   }
                 }
               }
@@ -303,6 +300,7 @@
       }
   
       &-footer{
+        display: none;
         background-color: #F1F2FA;
         border-top: 1px solid rgba(80, 80, 80, 0.15);
         

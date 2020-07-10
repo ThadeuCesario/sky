@@ -5,10 +5,16 @@ function sliderLoadHighlights(){
     loop: true,
     margin: 15,
     nav: true,
+    responsiveClass: true,
     responsive: {
       0: {
         items: 1,
-        nav: true,
+        nav: false,
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplayTimeout:5000,
       }
     }
   });

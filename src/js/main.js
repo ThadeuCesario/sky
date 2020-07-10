@@ -56,4 +56,6 @@ window.onload = function(){
   }
 
   loadDarkTheme();
+  increaseFontSize();
+  decreaseFontSize();
 }

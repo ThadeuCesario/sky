@@ -457,6 +457,27 @@
       &-header{
         background-color: #32383A;
         transition: .4s;
+        border-bottom: 1px solid rgba(238, 238, 238, 0.15);
+        &__navigation{
+          &-list{
+            &-item{
+              color: #999C9D;
+            }
+          }
+        }
+
+        &__options{
+          color: #999C9D;
+          
+          &-short{
+            background-color: #242a2c;
+            border: solid 1px #242a2c;
+          }
+
+          .fa{
+            color: #C1C6C0;
+          }
+        }
       }
 
       &-main{
@@ -481,6 +502,52 @@
               color: #fff;
             }
           }
+        }
+
+        &__options{
+          svg{
+            g{
+              g{
+                fill: #C2C3C4;
+              }
+            }
+          }
+          &-social{
+            i{
+              &::before{
+                color: rgba(255, 255, 255, 0.7);
+              }
+            }
+          }
+        }
+
+        &__institutional{
+          &-app{
+            &-title{
+              &-strong{
+                color: #C2C4C5;
+              }
+            }
+          }
+          &-about{
+            &-title{
+              color: #999C9A;
+            }
+            &-list{
+              &-item{
+                a{
+                  color: #fff;
+                  &:hover{
+                    color: #DB524F;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &__copyright{
+          color: rgba(255, 255, 255, 0.7);
         }
       }
     }

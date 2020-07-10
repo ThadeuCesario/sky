@@ -26,9 +26,26 @@ function decreaseFontSize(){
   btnMinusOption.addEventListener('click', function(){
     let htmlElement = document.getElementsByTagName('html')[0];
     let fontSizeHtml = parseFloat(window.getComputedStyle(htmlElement, null).getPropertyValue('font-size'));
-    
+
     if(fontSizeHtml > 16){
       htmlElement.style.fontSize = `${--fontSizeHtml}px`;
     }
   });
+}
+
+function categoryMarker(){
+  let navigationOptionsMenu = document.getElementsByClassName('sky-header__navigation-list-item');
+
+  for(let i = 0; i < navigationOptionsMenu.length; i++){
+    navigationOptionsMenu[i].addEventListener('click', function(event){
+
+      for(let j = 0; j < navigationOptionsMenu.length; j++){
+        if(navigationOptionsMenu[j].classList.contains('is--active')){
+          navigationOptionsMenu[j].classList.remove('is--active');
+        }
+      }
+
+      (event.target).classList.toggle('is--active');
+    });
+  }
 }

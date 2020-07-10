@@ -47,8 +47,10 @@
               font-size: 1rem;
               cursor: pointer;
               padding: 15px;
+              border-bottom: solid 5px #fff;
   
               &.is--active{
+                transition: .4s;
                 border-bottom: solid 5px #f00;
                 color: #f00;
                 font-weight: 500;
@@ -320,6 +322,13 @@
               &::before{
                 font-size: 1.5rem;
                 color: #616164;
+                transition: .4s;
+              }
+              &:hover{
+                &::before{
+                  color: #DB524F;
+                  transition: .4s;
+                }
               }
             }
           }
@@ -361,6 +370,23 @@
               &-img{
                 width: 200px;
                 margin: 0 15px;
+
+                &:first-child{
+                  margin: 0 15px 0 0;
+                }
+
+                a{
+                  &:hover{
+                    svg{
+                      g{
+                        path{
+                          fill: #DB524F;
+                          transition: .2s;
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -473,6 +499,7 @@
           &-list{
             &-item{
               color: #999C9D;
+              border-bottom: solid 5px #32383A;
             }
           }
         }
@@ -537,6 +564,20 @@
             &-title{
               &-strong{
                 color: #C2C4C5;
+              }
+            }
+            &-stores{
+              &-img{
+                a{
+                  svg{
+                    g{
+                      path{
+                        transition: .4s;
+                        fill: #fff;
+                      }
+                    }
+                  }
+                }
               }
             }
           }

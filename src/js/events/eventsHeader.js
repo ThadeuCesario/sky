@@ -49,3 +49,21 @@ function categoryMarker(){
     });
   }
 }
+
+function openMobileMenu(){
+  let mobileMenu = document.getElementById('menu-mobile');
+
+  mobileMenu.addEventListener('click', function(){
+    let btnMenuMobile = document.getElementById('options-header-mobile');
+    btnMenuMobile.classList.toggle('is--active');
+  });
+}
+
+function closeMobileMenu(){
+  let btnCloseMenuMobile = document.getElementById('options-close-menu');
+
+  btnCloseMenuMobile.addEventListener('click', function(){
+    let btnMenuMobile = document.getElementById('options-header-mobile');
+    btnMenuMobile.classList.toggle('is--active');
+  });
+}

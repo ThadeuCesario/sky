@@ -492,6 +492,14 @@
         }
       }
     }
+
+    .menu{
+      &-mobile{
+        &-options{
+          display: none;
+        }
+      }
+    }
   }   
 
   .dark-theme{

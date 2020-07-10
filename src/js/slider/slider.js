@@ -1,11 +1,5 @@
 function sliderLoadHighlights(){
   $(".sky-main__highlights.owl-carousel").owlCarousel({
-    center: true,
-    items: 3,
-    loop: true,
-    margin: 15,
-    nav: true,
-    responsiveClass: true,
     responsive: {
       0: {
         items: 1,
@@ -15,6 +9,13 @@ function sliderLoadHighlights(){
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout:5000,
+      },
+      1024: {
+        center: true,
+        items: 3,
+        loop: true,
+        margin: 15,
+        nav: true,
       }
     }
   });

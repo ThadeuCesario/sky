@@ -691,5 +691,34 @@
         }
       }
     }
+
+    .modal{
+      &-search{
+        background-color: #32383a;
+        opacity: 0.5;
+        &__btn{
+          &-close{
+            &-img{
+              &::before{
+              }
+            }
+
+            + div{
+              
+              .fa{
+              }
+            }
+          }
+        }
+
+        &.is--active{
+          
+        }
+
+        &__input{
+          
+        }
+      }
+    }
   }
 }

@@ -695,5 +695,34 @@
         }
       }
     }
+
+    .modal{
+      &-search{
+        &__btn{
+          &-close{
+            &-img{
+              &::before{
+              }
+            }
+
+            + div{
+              
+              .fa{
+              }
+            }
+          }
+        }
+
+        &.is--active{
+          background-color: #32383a;
+          opacity: 0.5;
+        }
+
+        &__input{
+          
+        }
+      }
+    }
+
   }
 }

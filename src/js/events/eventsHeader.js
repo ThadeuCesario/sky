@@ -1,10 +1,17 @@
 function loadDarkTheme(){
   let btnThemeOption = document.getElementById('theme-option');
+  let btnThemeOptionMobile = document.getElementById('toggle-dark-theme');
 
   btnThemeOption.addEventListener('click', function(){
     let bodyElement = document.getElementsByTagName('body')[0];
     bodyElement.classList.toggle('dark-theme');
   });
+
+  btnThemeOptionMobile.addEventListener('click', function(event){
+    console.log(event.target.checked);
+    let bodyElement = document.getElementsByTagName('body')[0];
+    event.target.checked ? bodyElement.classList.add('dark-theme') : bodyElement.classList.remove('dark-theme');
+  })
 }
 
 function increaseFontSize(){

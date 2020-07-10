@@ -400,6 +400,10 @@
               font-weight: bold;
               color: rgba(0, 0, 0, 0.38);
               font-size: 1.125rem;
+
+              + svg{
+                display: none;
+              }
             }
             &-list{
               &-item{

@@ -390,10 +390,31 @@
           &-about{
             border-bottom: 1px solid rgba(80,80,80,0.15);
             padding: 0 15px;
+
+            > div{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            + div {
+              > div{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+              }
+            }
+
             &-title{
               font-weight: bold;
               color: rgba(0, 0, 0, 0.38);
               font-size: 1.125rem;
+
+              + svg{
+                width: 20px;
+              }
             }
             &-list{
               &-item{
@@ -446,9 +467,6 @@
                   &-footer{
                     &__institutional{
                       &-about{
-                        &-title{
-                          padding: 0 15px;
-                        }
                         &-list{
                           padding: 0 15px;
 
@@ -463,6 +481,14 @@
                       }
                     }
                   }
+                }
+
+                div{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 0 15px;
                 }
               }
             }

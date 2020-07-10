@@ -100,7 +100,7 @@
   
       &-main{
         margin: 40px 0;
-        padding: 0 15px;
+        padding: 0 0 0 15px;
         overflow: hidden;
         &__highlights{
           &.owl{
@@ -213,7 +213,7 @@
   
             .owl{
               &-item{
-                max-width: 170px;
+                max-width: 130px;
                 &__group{
                   position: relative;
                   cursor: pointer;
@@ -297,7 +297,6 @@
       }
   
       &-footer{
-        display: none;
         background-color: #F1F2FA;
         border-top: 1px solid rgba(80, 80, 80, 0.15);
         
@@ -329,7 +328,7 @@
   
         &__institutional{
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           align-items: flex-start;
           justify-content: space-between;
           padding: 20px;
@@ -337,7 +336,7 @@
           
           &-app{
             display: flex;
-            width: 40%;
+            width: 100%;
             &-title{
               margin: 0 20px;
             }
@@ -347,7 +346,7 @@
             }
             &-stores{
               margin: 15px 0;
-              display: flex;
+              display: none;
               &-available{
                 margin: 0 10px;
                 

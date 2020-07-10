@@ -26,13 +26,26 @@ function sliderLoadHighlights(){
 
 function sliderLoadMovies(){
   $(".sky-main__portrait-movie.owl-carousel").owlCarousel({
-    loop: false,
-    margin: 10,
-    lazyLoad: true,
-    autoWidth: true,
-    nav: true,
-    items: 7,
-    dots: false
+    responsive: {
+      0: {
+        loop: false,
+        margin: 10,
+        lazyLoad: true,
+        autoWidth: true,
+        nav: false,
+        items: 3,
+        dots: false
+      },
+      1024: {
+        loop: false,
+        margin: 10,
+        lazyLoad: true,
+        autoWidth: true,
+        nav: true,
+        items: 7,
+        dots: false
+      }
+    }
   });
 
   $(".sky-main__portrait-movie.owl-carousel .owl-prev").html("<i class='fa fa-arrow-left' aria-hidden='true'></i>");

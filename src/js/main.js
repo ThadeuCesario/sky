@@ -1,6 +1,6 @@
 window.onload = function(){
   const urlApi = 'https://sky-frontend.herokuapp.com/movies';
-
+  
   fetch(urlApi)
     .then(response => response.json())
     .then(response => {
@@ -54,4 +54,6 @@ window.onload = function(){
     }
     sliderLoadMovies();
   }
+
+  loadDarkTheme();
 }

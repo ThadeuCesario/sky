@@ -108,6 +108,7 @@
         margin: 40px 0;
         &__highlights{
           height: 350px;
+          position: relative;
   
           &.owl{
             &-stage{
@@ -254,7 +255,7 @@
                 
                 .owl-prev{
                   position: absolute;
-                  left: -32px;
+                  left: -23px;
                   padding: 25px;
                   border-radius: 50%;
                   background-color: #242a2c;
@@ -273,7 +274,7 @@
                 }
                 .owl-next{
                   position: absolute;
-                  right: -32px;
+                  right: -23px;
                   padding: 25px;
                   border-radius: 50%;
                   background-color: #242a2c;

@@ -10,6 +10,13 @@ function sliderLoadHighlights(){
         autoplayHoverPause: true,
         autoplayTimeout:5000,
       },
+      768: {
+        center: true,
+        items: 2,
+        loop: true,
+        margin: 15,
+        nav: true,
+      },
       1024: {
         center: true,
         items: 3,
@@ -69,5 +76,6 @@ function verifyErrorBanners(){
   if(isError){
     $(".sky-main__highlights.owl-carousel").owlCarousel('refresh');
     $(".sky-main__portrait-movie.owl-carousel").owlCarousel('refresh');
+    verifyErrorBanners();
   }
 }

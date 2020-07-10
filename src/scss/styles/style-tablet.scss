@@ -108,6 +108,7 @@
         margin: 40px 0;
         &__highlights{
           height: 350px;
+          position: relative;
   
           &.owl{
             &-stage{
@@ -174,7 +175,7 @@
           .owl-nav{
             width: 100%;
             position: absolute;
-            top: 50%;
+            top: 25%;
   
             .owl-prev{
               position: absolute;
@@ -379,7 +380,7 @@
                 margin: 0 15px;
 
                 &:first-child{
-                  margin: 0 15px 0 0;
+                  margin: 0 0 20px 0;
                 }
 
                 a{
@@ -494,6 +495,7 @@
           color: rgba(0, 0, 0, 0.6);
           font-size: 0.875rem;
           padding: 20px;
+          text-align: center;
         }
       }
     }
@@ -621,6 +623,7 @@
 
         &__copyright{
           color: rgba(255, 255, 255, 0.7);
+          text-align: center;
         }
       }
     }

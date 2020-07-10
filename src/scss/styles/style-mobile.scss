@@ -474,15 +474,16 @@
             &-list{
               display: flex;
               flex-direction: row;
+              flex-wrap: wrap;
               align-items: center;
-              justify-content: center;
-              padding: 15px 50px;
+              justify-content: flex-start;
+              padding: 15px;
               background-color: #fff;
               &-item{
                 list-style-type: none;
                 &::after{
                   content: '|';
-                  margin: 0 15px;
+                  margin: 0 5px;
                 }
   
                 &:last-child{
@@ -507,6 +508,7 @@
           color: rgba(0, 0, 0, 0.6);
           font-size: 0.875rem;
           padding: 20px;
+          text-align: center;
         }
       }
     }

@@ -389,7 +389,7 @@
   
           &-about{
             border-bottom: 1px solid rgba(80,80,80,0.15);
-            padding: 15px;
+            padding: 0 15px;
 
             > div{
               display: flex;
@@ -416,6 +416,7 @@
                 width: 20px;
               }
             }
+
             &-list{
               &-item{
                 list-style-type: none;
@@ -431,6 +432,8 @@
                   }
                 }
               }
+
+             
             }
             + div{
               padding: 15px;
@@ -449,19 +452,28 @@
             flex-direction: column;
             justify-content: space-around;
             width: 100%;
-  
-            &-options{
-              padding: 0 0 15px 0;
-              strong{
-                > ul{
-                  margin-top: 15px;
-                  border-top: 1px solid rgba(80,80,80,0.15);
-                  &:hover{
-                    color: rgba(0,0,0,0.87);
-                    opacity: 0.8;
+
+            &:first-child{
+                .sky{
+                  &-footer{
+                    &__institutional{
+                      &-about{
+                        border: solid;
+                        &-list{
+                          padding: 0 15px;
+                          + strong{
+                            width: 100%;
+                            ul{
+                              li{
+                                padding: 15px 15px 0;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
-              }
 
               &:last-child{
                 .sky{
@@ -470,8 +482,8 @@
                       &-about{
                         &-list{
                           padding: 0 15px;
-
                           + strong{
+                            width: 100%;
                             ul{
                               li{
                                 padding: 15px 15px 0;
@@ -486,10 +498,20 @@
 
                 div{
                   display: flex;
-                  flex-direction: row;
+                  flex-direction: column;
                   justify-content: space-between;
-                  align-items: center;
-                  padding: 0 15px;
+                  align-items: flex-start;
+                }
+
+                > div{
+                  > div{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+                  }
                 }
               }
             }
@@ -637,7 +659,6 @@
             }
           }
           &-about{
-
             &-title{
               color: #999C9A;
             }

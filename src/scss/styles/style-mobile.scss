@@ -331,12 +331,16 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: space-between;
-          padding: 20px;
           border-top: 1px solid rgba(80,80,80,0.15);
           
           &-app{
             display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             width: 100%;
+            margin: 15px 0;
+            padding: 0 15px;
             &-title{
               margin: 0 20px;
             }
@@ -384,6 +388,8 @@
           }
   
           &-about{
+            border-bottom: 1px solid rgba(80,80,80,0.15);
+            padding: 0 15px;
             &-title{
               font-weight: bold;
               color: rgba(0, 0, 0, 0.38);
@@ -393,6 +399,7 @@
               &-item{
                 list-style-type: none;
                 padding: 20px 0 0 0;
+
                 a{
                   text-decoration: none;
                   color: rgba(0, 0, 0, 0.87);
@@ -405,7 +412,8 @@
               }
             }
             + div{
-              margin: 20px 0 0 0;
+              padding: 0 15px;
+              border-bottom: 1px solid rgba(80,80,80,0.15);
             }
           }
   
@@ -417,17 +425,43 @@
   
           &-flex{
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
-            width: 60%;
+            width: 100%;
   
             &-options{
               strong{
                 > ul{
                   margin-top: 15px;
+                  border-top: 1px solid rgba(80,80,80,0.15);
                   &:hover{
                     color: rgba(0,0,0,0.87);
                     opacity: 0.8;
+                  }
+                }
+              }
+
+              &:last-child{
+                .sky{
+                  &-footer{
+                    &__institutional{
+                      &-about{
+                        &-title{
+                          padding: 0 15px;
+                        }
+                        &-list{
+                          padding: 0 15px;
+
+                          + strong{
+                            ul{
+                              li{
+                                padding: 0 15px;
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -574,6 +608,7 @@
             }
           }
           &-about{
+
             &-title{
               color: #999C9A;
             }
@@ -586,6 +621,12 @@
                   }
                 }
               }
+            }
+          }
+          &-flex{
+            &-options{
+              padding: 0 15px;
+              border-bottom: 1px solid rgba(80,80,80,0.15);
             }
           }
         }

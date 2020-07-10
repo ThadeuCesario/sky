@@ -50,4 +50,24 @@ function sliderLoadMovies(){
 
   $(".sky-main__portrait-movie.owl-carousel .owl-prev").html("<i class='fa fa-arrow-left' aria-hidden='true'></i>");
   $(".sky-main__portrait-movie.owl-carousel .owl-next").html("<i class='fa fa-arrow-right' aria-hidden='true'></i>");
+
+  verifyErrorBanners();
+}
+
+function verifyErrorBanners(){
+  let movieOptions = document.getElementsByClassName('owl-stage');
+  let isError = false;
+  
+  for(let i = 0; i < movieOptions.length; i++){
+    let movieContainer = parseFloat(movieOptions[i].style.width);
+
+    if(movieContainer < 100){
+      isError = true;
+    }
+  }
+
+  if(isError){
+    $(".sky-main__highlights.owl-carousel").owlCarousel('refresh');
+    $(".sky-main__portrait-movie.owl-carousel").owlCarousel('refresh');
+  }
 }

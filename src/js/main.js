@@ -58,6 +58,7 @@ window.onload = function(){
     sliderLoadMovies();
   }
 
+  
   loadDarkTheme();
   increaseFontSize();
   decreaseFontSize();
@@ -65,4 +66,5 @@ window.onload = function(){
   loadAccordionFuncionalityFooter();
   openMobileMenu();
   closeMobileMenu();
+  verifyErrorBanners();
 }

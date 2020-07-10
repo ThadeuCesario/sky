@@ -21,6 +21,7 @@
           .fa{
             &::before{
               font-size: 2rem;
+              color: rgba(0, 0, 0, 0.6);
             }
           }
         }
@@ -366,6 +367,7 @@
             padding: 0 15px;
             &-title{
               margin: 0 20px;
+              color: #F35C58;
             }
             &-img{
               width: 48px;
@@ -448,11 +450,11 @@
 
               + svg{
                 width: 20px;
-                transform: rotate(0deg);
+                transform: rotate(180deg);
                 transition: .4s;
 
                 &.is--active{
-                  transform: rotate(180deg);
+                  transform: rotate(0deg);
                   transition: .4s;
                 }
               }
@@ -789,6 +791,7 @@
         border-bottom: 1px solid rgba(238, 238, 238, 0.15);
 
         &__navigation{
+          background-color: #32383A;
           &-list{
             &-item{
               color: #999C9D;

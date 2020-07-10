@@ -80,6 +80,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            
             .sky{
               &-header{
                 &__options{
@@ -100,6 +101,9 @@
                       }
                     }
                   }
+                }
+                &__mobile{
+                  margin: 0 10px;
                 }
               }
             }
@@ -777,9 +781,9 @@
           }
         }
       }
-    }
-  }   
-
+    }  
+  }  
+  
   .dark-theme{
     background-color: #32383A;
     transition: .4s;
@@ -814,8 +818,10 @@
         }
 
         &__mobile{
-          &::before{
-            color: #C2C3C4;
+          &.fa{
+            &::before{
+              color: #C2C3C4;
+            }
           }
         }
       }
@@ -930,7 +936,5 @@
         }
       }
     }
-
-
   }
 }

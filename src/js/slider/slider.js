@@ -13,7 +13,7 @@ function sliderLoadHighlights() {
       },
       768: {
         center: true,
-        items: 2,
+        items: 3,
         loop: true,
         margin: 15,
         nav: true,

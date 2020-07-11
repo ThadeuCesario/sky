@@ -8,7 +8,6 @@ function loadDarkTheme(){
   });
 
   btnThemeOptionMobile.addEventListener('click', function(event){
-    console.log(event.target.checked);
     let bodyElement = document.getElementsByTagName('body')[0];
     event.target.checked ? bodyElement.classList.add('dark-theme') : bodyElement.classList.remove('dark-theme');
   })

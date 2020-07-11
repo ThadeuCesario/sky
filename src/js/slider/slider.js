@@ -63,18 +63,10 @@ function sliderLoadMovies(){
 
 function verifyErrorBanners(){
   let movieOptions = document.getElementsByClassName('owl-stage');
-  let isError = false;
-  
   for(let i = 0; i < movieOptions.length; i++){
     let movieContainer = parseFloat(movieOptions[i].style.width);
-
     if(movieContainer < 100){
-      isError = true;
+      $(".owl-carousel").owlCarousel('refresh');
     }
-  }
-
-  if(isError){
-    $(".sky-main__highlights.owl-carousel").owlCarousel('refresh');
-    $(".sky-main__portrait-movie.owl-carousel").owlCarousel('refresh');
   }
 }

@@ -27,7 +27,6 @@ window.onload = function(){
   function loadMainMoviesByType(data){
     let portraitMoviesData = data.filter(info => (info.type).trim().toLowerCase() === 'carousel-portrait');
     let moviesPortrait = portraitMoviesData[0]['movies'];
-    console.log(moviesPortrait);
     let typesMoviesPortrait = (moviesPortrait.map(movie => movie.categories).map(categoryType => categoryType.split(','))).flat(Infinity);
     typesMoviesPortrait = typesMoviesPortrait.map(movie => movie.trim());
     typesMoviesPortrait = typesMoviesPortrait.filter((value, index) => typesMoviesPortrait.indexOf(value) === index);
@@ -55,6 +54,7 @@ window.onload = function(){
 
       moviesPortraitSection.appendChild(articlePortraitMovies);
     }
+
     sliderLoadMovies();
   }
 

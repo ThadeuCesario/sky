@@ -25,6 +25,11 @@ npm start
 Obs.: O Projeto será inicializado na porta 8080.
 Mas caso essa porta esteja rodando outra aplicação, o Live Server iniciará em outra porta. 😉️
 </strong>
+<strong>
+Obs.: Se facilitar, o projeto pode ser validado nessa URL: https://sky-exam-thadeucesario.netlify.app/
+</strong>
+  
+  
 </p>
 
 <hr/>

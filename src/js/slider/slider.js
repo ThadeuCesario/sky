@@ -1,4 +1,4 @@
-function sliderLoadHighlights(){
+function sliderLoadHighlights() {
   $(".sky-main__highlights.owl-carousel").owlCarousel({
     responsive: {
       0: {
@@ -8,7 +8,7 @@ function sliderLoadHighlights(){
         loop: true,
         autoplay: true,
         autoplayHoverPause: true,
-        autoplayTimeout:5000,
+        autoplayTimeout: 5000,
       },
       768: {
         center: true,
@@ -23,15 +23,19 @@ function sliderLoadHighlights(){
         loop: true,
         margin: 15,
         nav: true,
-      }
-    }
+      },
+    },
   });
 
-  $(".sky-main__highlights.owl-carousel .owl-prev").html("<i class='fa fa-arrow-left' aria-hidden='true'></i>");
-  $(".sky-main__highlights.owl-carousel .owl-next").html("<i class='fa fa-arrow-right' aria-hidden='true'></i>");
+  $(".sky-main__highlights.owl-carousel .owl-prev").html(
+    "<i class='fa fa-arrow-left' aria-hidden='true'></i>"
+  );
+  $(".sky-main__highlights.owl-carousel .owl-next").html(
+    "<i class='fa fa-arrow-right' aria-hidden='true'></i>"
+  );
 }
 
-function sliderLoadMovies(){
+function sliderLoadMovies() {
   $(".sky-main__portrait-movie.owl-carousel").owlCarousel({
     responsive: {
       0: {
@@ -41,7 +45,7 @@ function sliderLoadMovies(){
         autoWidth: true,
         nav: false,
         items: 3,
-        dots: false
+        dots: false,
       },
       1024: {
         loop: false,
@@ -50,23 +54,36 @@ function sliderLoadMovies(){
         autoWidth: true,
         nav: true,
         items: 7,
-        dots: false
-      }
-    }
+        dots: false,
+      },
+    },
   });
 
-  $(".sky-main__portrait-movie.owl-carousel .owl-prev").html("<i class='fa fa-arrow-left' aria-hidden='true'></i>");
-  $(".sky-main__portrait-movie.owl-carousel .owl-next").html("<i class='fa fa-arrow-right' aria-hidden='true'></i>");
+  $(".sky-main__portrait-movie.owl-carousel .owl-prev").html(
+    "<i class='fa fa-arrow-left' aria-hidden='true'></i>"
+  );
+  $(".sky-main__portrait-movie.owl-carousel .owl-next").html(
+    "<i class='fa fa-arrow-right' aria-hidden='true'></i>"
+  );
 
   verifyErrorBanners();
 }
 
-function verifyErrorBanners(){
-  let movieOptions = document.getElementsByClassName('owl-stage');
-  for(let i = 0; i < movieOptions.length; i++){
+function verifyErrorBanners() {
+  let movieOptions = document.getElementsByClassName("owl-stage");
+  let isError = false;
+  for (let i = 0; i < movieOptions.length; i++) {
     let movieContainer = parseFloat(movieOptions[i].style.width);
-    if(movieContainer < 100){
-      $(".owl-carousel").owlCarousel('refresh');
+    if (movieContainer < 100) {
+      isError = true;
     }
+  }
+  if (isError) {
+    let reloadAllContainers = setInterval(() => {
+      $(".owl-carousel").owlCarousel("refresh");
+    }, 200);
+    setTimeout(() => {
+      clearInterval(reloadAllContainers);
+    }, 1000);
   }
 }

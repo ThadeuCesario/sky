@@ -79,8 +79,13 @@ function handleSearchMenu(){
   let searchBtn = document.getElementById('btn-search');
   let modalSearch = document.getElementById('menu-search');
   let closeBtn = document.getElementById('btn-close-search');
+  let searchBtnMobile = document.getElementById('btn-search-mobile');
 
   searchBtn.addEventListener('click', function(){
+    modalSearch.classList.add('is--active');
+  });
+
+  searchBtnMobile.addEventListener('click', function(){
     modalSearch.classList.add('is--active');
   });
 

@@ -490,6 +490,7 @@
           color: rgba(0, 0, 0, 0.6);
           font-size: 0.875rem;
           padding: 20px;
+          text-align: center;
         }
       }
     }
@@ -512,6 +513,7 @@
           z-index: 100;
           left: -100%;
           transition: .4s;
+          opacity: 0.9;
 
           display: flex;
           flex-direction: column;
@@ -561,7 +563,9 @@
           cursor: pointer;
           border-radius: 50px;
           box-shadow: 0 10px 8px -4px rgba(0,0,0,0.25);
-          border: none;
+          border: solid 1px #808080;
+          font-weight: bold;
+          color: #000;
         }
       }
     }
@@ -685,6 +689,36 @@
 
         &__copyright{
           color: rgba(255, 255, 255, 0.7);
+          text-align: center;
+        }
+      }
+    }
+
+    .modal{
+      &-search{
+        background-color: #32383a;
+        opacity: 0.9;
+        &__btn{
+          &-close{
+            &-img{
+              &::before{
+              }
+            }
+
+            + div{
+              
+              .fa{
+              }
+            }
+          }
+        }
+
+        &.is--active{
+          
+        }
+
+        &__input{
+          font-weight: bold;
         }
       }
     }

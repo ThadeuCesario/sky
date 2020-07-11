@@ -38,6 +38,7 @@ Mas caso essa porta esteja rodando outra aplicação, o Live Server iniciará em
   <li>OwlCarousel</li>
   <li>jQuery</li>
   <li>Gulp</li>
+  <li>EditorConfig</li>
   <li>Scss</li>
   <li>Npm</li>
   <li>Git</li>

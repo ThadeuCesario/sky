@@ -9,6 +9,7 @@ function sliderLoadHighlights() {
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout: 5000,
+        lazyLoad: true,
       },
       768: {
         center: true,
@@ -16,6 +17,7 @@ function sliderLoadHighlights() {
         loop: true,
         margin: 15,
         nav: true,
+        lazyLoad: true,
       },
       1024: {
         center: true,
@@ -23,6 +25,7 @@ function sliderLoadHighlights() {
         loop: true,
         margin: 15,
         nav: true,
+        lazyLoad: true,
       },
     },
   });
@@ -81,9 +84,9 @@ function verifyErrorBanners() {
   if (isError) {
     let reloadAllContainers = setInterval(() => {
       $(".owl-carousel").owlCarousel("refresh");
-    }, 200);
+    }, 10);
     setTimeout(() => {
       clearInterval(reloadAllContainers);
-    }, 1000);
+    }, 250);
   }
 }

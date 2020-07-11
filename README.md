@@ -22,7 +22,8 @@ npm start
 </code>
 <br/><br/>
 <strong>
-Obs.: O Projeto será inicializado na porta 8080, é válido garantir que a porta estará disponível. 😉️
+Obs.: O Projeto será inicializado na porta 8080.
+Mas caso essa porta esteja rodando outra aplicação, o Live Server iniciará em outra porta. 😉️
 </strong>
 </p>
 

@@ -22,12 +22,7 @@ window.onload = function () {
             `<img src='${movie["images"][0]["url"].replace(
               /\/fit-in\/.*\/images\//gm,
               "/fit-in/669x391/images/"
-            )}' class='swiper-slide sky-main__highlights-wrapper-image owl-lazy' data-src='${movie[
-              "images"
-            ][0]["url"].replace(
-              /\/fit-in\/.*\/images\//gm,
-              "/fit-in/669x391/images/"
-            )}'/>`
+            )}' class='swiper-slide sky-main__highlights-wrapper-image'/>`
         )
         .join("")}
     `;

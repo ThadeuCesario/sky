@@ -9,7 +9,7 @@ function sliderLoadHighlights() {
         autoplay: true,
         autoplayHoverPause: true,
         autoplayTimeout: 5000,
-        lazyLoad: true,
+        lazyLoad: false,
       },
       768: {
         center: true,
